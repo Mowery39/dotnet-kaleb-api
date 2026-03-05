@@ -25,6 +25,9 @@ var summaries = new[]
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
 };
 
+var tasks = new List<string>();
+
+
 // Adding my own endpoint 
 app.MapGet("/kaleb", () =>
 {
@@ -45,6 +48,28 @@ app.MapGet("/weatherforecast", () =>
     return forecast;
 })
 .WithName("GetWeatherForecast");
+
+//Return all tasks
+app.MapGet("/tasks", () =>
+{
+    return tasks;
+});
+
+//Add a task
+app.MapPost("/tasks", (string task) =>
+{
+    tasks.Add(task);
+    return tasks;
+});
+
+//Delete a task
+app.MapDelete("/tasks/{index}", (int index) =>
+{
+    if (index >= 0 && index < tasks.Count)
+    {
+        tasks.RemoveAt(index);
+    }
+});
 
 app.Run();
 
