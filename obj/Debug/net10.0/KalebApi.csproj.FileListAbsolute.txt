@@ -31,3 +31,7 @@ C:\Users\kmall\KalebApi\obj\Debug\net10.0\refint\KalebApi.dll
 C:\Users\kmall\KalebApi\obj\Debug\net10.0\KalebApi.pdb
 C:\Users\kmall\KalebApi\obj\Debug\net10.0\KalebApi.genruntimeconfig.cache
 C:\Users\kmall\KalebApi\obj\Debug\net10.0\ref\KalebApi.dll
+C:\Users\kmall\KalebApi\obj\Debug\net10.0\KalebApi.sourcelink.json
+C:\Users\kmall\KalebApi\bin\Debug\net10.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\kmall\KalebApi\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\kmall\KalebApi\bin\Debug\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
