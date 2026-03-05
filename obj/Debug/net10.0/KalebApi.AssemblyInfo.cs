@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KalebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+855baff6a86053bd85c6c0579db4ba2da8993d62")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9af0de9ed02b0dd251daa95d4593389951c646c0")]
 [assembly: System.Reflection.AssemblyProductAttribute("KalebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KalebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

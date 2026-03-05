@@ -25,7 +25,8 @@ var summaries = new[]
     "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
 };
 
-var tasks = new List<string>();
+//Holding TaskItem Objects 
+var tasks = new List<TaskItem>();
 
 
 // Adding my own endpoint 
@@ -56,9 +57,13 @@ app.MapGet("/tasks", () =>
 });
 
 //Add a task
-app.MapPost("/tasks", (string task) =>
+app.MapPost("/tasks", (string title) =>
 {
+    var id = tasks.Count + 1;
+    var task = new TaskItem(id, title);
+
     tasks.Add(task);
+
     return tasks;
 });
 
@@ -71,9 +76,19 @@ app.MapDelete("/tasks/{index}", (int index) =>
     }
 });
 
+//getting just one item 
+app.MapGet("/tasks/{id}", (int id) =>
+{
+    var task = tasks.FirstOrDefault(t => t.Id == id);
+
+    return task is not null ? Results.Ok(task) : Results.NotFound();
+});
+
 app.Run();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
 {
     public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
 }
+//Adding in the class that will hold our Tasks
+record TaskItem(int Id, string Title);
